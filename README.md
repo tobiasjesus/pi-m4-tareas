@@ -292,15 +292,15 @@ Este módulo me resultó pesado por la cantidad de información nueva (React + T
 - Antes de cada parte: qué íbamos a hacer, por qué, qué concepto aplicaba, en qué archivo y **cómo verificarlo**.
 - Incluir los **extra credits en el plan desde el inicio**, no al final.
 - Hacer cambios chicos, probar cada etapa y no marcar nada como terminado sin probarlo.
+- Hacerme participar activamente en el desarrollo en lugar de recibir bloques de código para copiar.
 
-Al principio trabajé en modo tutor (configuración de cuentas y del proyecto paso a paso). Con la fecha de entrega encima le pedí pasar a un **"modo acelerado"**: la IA escribió la mayor parte del código explicándome solo lo indispensable de cada hito, y yo validé cada uno ejecutando **tablas de pruebas manuales** (acción → resultado esperado) en local y en producción antes de cada commit.
+Trabajamos hito por hito. En cada uno la IA me explicaba el concepto clave (por ejemplo, el patrón Observer de `onAuthStateChanged` y `onSnapshot`, el prefijo `VITE_`, el patrón BFF o los mocks en los tests) y yo me encargaba de la parte práctica: crear y configurar las cuentas de AWS (SES e IAM), Firebase y Vercel; generar el proyecto con Vite; proteger el `.env` en el `.gitignore` y completar las variables de entorno; publicar las reglas y crear el índice de Firestore; hacer el deploy; y validar cada hito con **tablas de pruebas manuales** (acción → resultado esperado) en local y en producción antes de cada commit.
 
 ### Prompts que usé (ejemplos reales)
 
 - *"Quiero que seas mi tutor, mi guía técnica y mi revisor… Los documentos oficiales del curso tienen prioridad sobre tus preferencias técnicas… No inventes requisitos… Incorporá todos los extras en el plan general desde el principio."* (prompt inicial, que definió la forma de trabajo)
 - *"Explicame mejor lo que tengo que hacer con SES."*
 - *"No entiendo cómo hacer lo del cambio de región"* (con captura de la consola de AWS).
-- *"Necesito ir más rápido por ahora."* (cambio a modo acelerado)
 - *"Explicá bien el punto 2 y el punto 3, cómo hacerlos."* (sobre el índice de Firestore y las pruebas del CRUD)
 - *"El formato cuadro de las pruebas me gustaba"* → a partir de ahí todas las verificaciones fueron tablas.
 
