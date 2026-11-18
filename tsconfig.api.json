@@ -8,6 +8,7 @@
     "strict": true,
 
     "module": "nodenext",
+    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -16,5 +17,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["api"]
+  "include": ["api", "tests"]
 }
