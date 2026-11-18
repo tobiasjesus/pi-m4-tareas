@@ -1,9 +1,11 @@
+import { AuthProvider } from './features/auth/AuthProvider'
+import { AppRouter } from './routes/AppRouter'
+
 function App() {
   return (
-    <main className="container">
-      <h1>Gestor de Tareas</h1>
-      <p>Proyecto en construcción.</p>
-    </main>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   )
 }
 
