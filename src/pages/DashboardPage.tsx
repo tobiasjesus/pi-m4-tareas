@@ -3,6 +3,7 @@ import { Header } from '../components/layout/Header'
 import { TodoForm } from '../components/tasks/TodoForm'
 import { TodoList } from '../components/tasks/TodoList'
 import { TaskToolbar } from '../components/tasks/TaskToolbar'
+import { EmailSummaryButton } from '../components/tasks/EmailSummaryButton'
 import { useAuth } from '../hooks/useAuth'
 import { useTasks } from '../hooks/useTasks'
 import { addTask, deleteTask, toggleTask, updateTask } from '../services/taskService'
@@ -52,6 +53,12 @@ export function DashboardPage() {
       <Header />
       <main className="container">
         <h1>Mis tareas</h1>
+
+        <section className="card" aria-labelledby="email-title">
+          <h2 id="email-title">Resumen por email</h2>
+          <p className="status">Recibí en {user?.email} el estado de tus tareas pendientes y completadas.</p>
+          <EmailSummaryButton to={user?.email ?? null} tasks={tasks} />
+        </section>
 
         <section className="card" aria-labelledby="new-task-title">
           <h2 id="new-task-title">Nueva tarea</h2>
