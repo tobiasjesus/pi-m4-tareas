@@ -27,7 +27,3 @@ export function validateAuthForm(values: AuthFormValues, isRegister = false): Au
 
   return errors
 }
-
-export function hasErrors(errors: object): boolean {
-  return Object.keys(errors).length > 0
-}

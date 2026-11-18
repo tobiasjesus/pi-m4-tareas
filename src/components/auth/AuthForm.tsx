@@ -1,7 +1,8 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { FormField } from '../ui/FormField'
 import { Button } from '../ui/Button'
-import { hasErrors, validateAuthForm } from '../../utils/validateAuth'
+import { validateAuthForm } from '../../utils/validateAuth'
+import { hasErrors } from '../../utils/forms'
 import { getAuthErrorMessage } from '../../utils/authErrors'
 import type { AuthFormErrors, AuthFormValues } from '../../types/auth'
 
